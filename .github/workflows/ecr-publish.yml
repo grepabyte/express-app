@@ -33,7 +33,7 @@ jobs:
 
     - name: Tag Docker image with semantic version
       run: |
-        docker tag $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }} $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }}
+        docker tag $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.get-version.outputs.version }} $ECR_REGISTRY/$ECR_REPOSITORY:1.0.0
       env:
         ECR_REGISTRY: ${{ steps.ecr-login.outputs.registry }}
         ECR_REPOSITORY: hitc-docker-cicd-ecr
